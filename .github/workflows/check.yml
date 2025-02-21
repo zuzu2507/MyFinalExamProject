@@ -1,0 +1,15 @@
+name: Vérification du dépôt
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Afficher un message
+        run: echo "GitHub Action exécutée avec succès!"
